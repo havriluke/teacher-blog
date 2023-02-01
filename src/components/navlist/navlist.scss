@@ -1,0 +1,88 @@
+
+.navlist {
+
+    .icon {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .list {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        opacity: 0;
+        visibility: hidden;
+        background-color: #fdfdfdee;
+        box-shadow: 0 5px 10px #f0f0f0;
+        transition: all .3s ease 0s;
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        // transform: translate(0, 60px);
+
+        li {
+            color: var(--font-color);
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+           
+            span {
+                display: block;
+                width: fit-content;
+                position: relative;
+                // transform: translateX(0);
+                // transition: all .3s ease 0s;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 5px);
+                    width: 0;
+                    height: 1.5px;
+                    // border-radius: 50%;
+                    background-color: var(--base-color);
+                    // opacity: 0;
+                    // visibility: hidden;
+                    transition: all .5s ease 0s;
+                }
+                &:hover {
+                    &::after {
+                        // opacity: 1;
+                        // visibility: visible;
+                        width: 75%;
+                    }
+                }
+            }
+
+            
+        }
+
+        @media (max-width: 420px) {
+            gap: 30px;
+            li {
+                font-size: 14px;
+            }
+            
+        }
+    }
+
+    &.active {
+        .list {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+.main {
+
+    .credos {
+        margin-top: 70px;
+        display: flex;
+        // grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        .credo {
+            flex: 50%;
+        }
+
+        @media (max-width: 970px) {
+            flex-direction: column;
+            gap: 35px;
+        }
+    }
+}

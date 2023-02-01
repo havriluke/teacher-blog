@@ -1,0 +1,170 @@
+
+
+.quotes {
+    margin-top: 100px;
+
+    .quote {
+        margin-top: 45px;
+        margin-bottom: 300px;
+        height: fit-content;
+        position: relative;
+        box-shadow: none;
+        // overflow: hidden;
+    
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: fit-content;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .5s ease 0s;
+            display: flex;
+            justify-content: center;
+            margin-top: -90px;
+            
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .text-content {
+                width: fit-content;
+                height: fit-content;
+                font-weight: 30;
+                max-width: 60%;
+                // font-style: italic;
+                letter-spacing: .5px;
+                line-height: 1.5;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 125px 40px 20px;
+                @media (max-width: 600px) {
+                    max-width: 100%;
+                }
+                .stars {
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                .text {
+                    font-size: 22px;
+                    span {
+                        display: block;
+                    }
+                    @media (max-width: 900px) {
+                        font-size: 18px;
+                    }
+                    @media (max-width: 400px) {
+                        font-size: 16px;
+                    }
+                }
+                .author {
+                    margin-top: 25px;
+                    font-size: 16px;
+                    align-self: flex-start;
+                    font-weight: 400;
+                    @media (max-width: 400px) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+    
+            .photo {
+                // background-image: url('../../assets//photos/quotes/skovoroda.jpg');
+                background-size: cover;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                width: 85px;
+                height: 85px;
+                border-radius: 50%;
+                transform: translate(-50%, -25%);
+                // border: 3px solid var(--font-color-trans);
+            }
+
+            
+        }
+    }
+
+    .controls {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        position: absolute;
+        left: 50%;
+        z-index: 5;
+        transform: translateX(-50%);
+        
+
+        img {
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+        }
+        .dots {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .dot {
+                width: 5px;
+                height: 5px;
+                background-color: var(--font-color-trans);
+                border-radius: 50%;
+                transition: all .3s ease 0s;
+                &.active {
+                    background-color: var(--font-color);
+                }
+            }
+        }
+    }
+
+    .symbols {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .symbols-wrapper {
+            display: flex;
+            width: min-content;
+            justify-content: center;
+            align-items: center;
+            // transform: translateX(-150%);
+            // margin: 0 0 30px;
+            gap: 120px;
+            img {
+                width: 50px;
+                height: 50px;
+                &:last-child {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &::before, &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            width: calc(50% - 100px - 50px);
+            height: 2px;
+            background-color: var(--base-color);
+            transform: translateY(-50%);
+
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+        &::before {
+            left: 0;
+        }
+        &::after {
+            right: 0;
+        }
+        
+    }
+}

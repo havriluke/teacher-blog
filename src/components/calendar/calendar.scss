@@ -1,0 +1,79 @@
+
+.calendar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(calc(-100% + 35px), calc(-50% - 100px));
+    z-index: 90;
+    transition: all .5s ease 0s;
+
+    .content {
+        display: flex;
+        border-radius: var(--border-radius);
+        box-shadow: 0 0 2px var(--font-color-trans);
+        overflow: hidden;
+
+        .date-content {
+            padding: 15px 10px 15px 20px;
+            background-color: white;
+            .bar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 25px;
+                .date {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                .day {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+             
+            &.wknd {
+                color: var(--red-color);
+            }
+        }
+        .opener {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--base-color);
+            padding: 0 5px;
+            cursor: pointer;
+            img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    .holiday {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: var(--white-color);
+        width: fit-content;
+        border-radius: var(--border-radius);
+        font-size: 15px;
+        font-style: italic;
+        opacity: 0;
+        visibility: hidden;
+        span {
+            display: block;
+            max-width: 150px;
+            word-break: normal;
+        }
+    }
+
+    &.active {
+        transform: translate(-10px, calc(-50% - 100px));
+        .holiday {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

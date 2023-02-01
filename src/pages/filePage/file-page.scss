@@ -1,0 +1,24 @@
+
+.file-page {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+
+    .content {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+
+        
+    }
+    iframe {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        width: 850px;
+        height: 100vh;
+        .doc-content {
+            // width: 100%;
+        }
+    }
+}

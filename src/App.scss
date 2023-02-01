@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --base-color: #F4DD66;
+    --font-color: #2F2F2F;
+    --white-color: #fdfdfd;
+    --red-color: #E55934;
+    --base-color-trans: #DAE2FB;
+    --font-color-trans: #2F2F2F55;
+    --border-radius: 10px;
+    --navbar-height: 50px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    position: relative;
+    font-size: 14px;
+    overflow: overlay;
+    background-color: var(--white-color);
+    // background-image: url('./assets/photos/sunflower-bg-2.png');
+    // background-size: contain;
+}
+
+.container {
+    width: 70vw;
+    margin: 0 auto;
+    @media (max-width: 900px) {
+        width: 80vw;
+    }
+    @media (max-width: 600px) {
+        width: 90vw;
+    }
+}
+
+.component {
+    padding: 25px 40px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px var(--font-color-trans);
+    border-radius: var(--border-radius);
+    
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--font-color-trans);
+    border-radius: var(--border-radius);
+}

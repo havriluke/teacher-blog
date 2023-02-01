@@ -1,0 +1,43 @@
+
+.plates {
+    margin-top: 75px;
+    margin-bottom: 10px;
+    display: flex;
+    // flex-direction: column;
+    gap: 20px;
+
+    .plate {
+        flex: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            .title {
+                font-size: 22px;
+            }
+            .text {
+                font-size: 16px;
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px 15px;
+            background-color: var(--base-color);
+            border-radius: var(--border-radius);
+        }
+    }
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,25 @@
+
+.credo {
+
+    .title {
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 22px;
+    }
+    .text {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.5;
+        font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+        .title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .text {
+            font-size: 18px;
+        }
+    }
+}

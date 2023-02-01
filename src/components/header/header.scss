@@ -1,0 +1,49 @@
+
+.header {
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    background: linear-gradient(0deg, transparent 50%, var(--base-color) 150%);
+    z-index: 6;
+    overflow: hidden;
+
+    .quote {
+        font-family: 'Bad Script';
+        font-size: 32px;
+        width: 50vw;
+        margin: 5vw;
+
+        .stars {
+            display: block;
+            text-align: center;
+            line-height: 0.5;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            span {
+                display: block;
+            }
+        }
+        .author {
+            margin-top: 10px;
+            display: block;
+            text-align: right;
+        }
+    }
+}
+
+.bg-image {
+    position: absolute;
+    top: 50vh;
+    left: 50vh;
+    transform: translate(70%, -60%) rotate(230deg);
+    background-image: url('../../assets/photos/sunflower-header-2.png');
+    width: 700px;
+    height: 700px;
+    background-size: cover;
+    z-index: 5;
+    
+}

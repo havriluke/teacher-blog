@@ -1,0 +1,30 @@
+
+.footer {
+    margin-top: 40px;
+    // width: 100vw;
+    // height: 80px;
+    // background-color: var(--base-color-trans);
+    background: linear-gradient(0deg, var(--base-color) -20%, var(--white-color) 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 2px;
+
+    .logo {
+
+        .label {
+            font-family: 'Bad Script', serif;
+            font-size: 20px;
+        }
+    }
+    .social {
+        display: flex;
+        gap: 10px;
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

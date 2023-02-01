@@ -1,0 +1,23 @@
+
+.background {
+    padding-bottom: 75px;
+    background: linear-gradient(0deg, var(--base-color-trans) 0%, var(--white-color) 100%);
+    position: relative;
+
+    .squares {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform: translateY(calc(100vw / 10 / 3));
+        display: flex;
+        z-index: -1;
+
+        .square {
+            width: calc(100vw / 10);
+            height: calc(100vw / 10);
+            background-color: var(--base-color-trans);
+            border-radius: 50%;
+        }
+    }
+}
