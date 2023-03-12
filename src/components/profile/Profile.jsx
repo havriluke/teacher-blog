@@ -18,8 +18,7 @@ const Profile = () => {
                 <div className="text-content">
                     <h1 className="title">Гаврилюк Ірина Вікторівна</h1>
                     <div className='text'>
-                        <span>Заслужений вчитель України.</span>
-                        <span>Завуч Гришковецької гімназії. Хороша людина.</span>
+                        <span>Вчитель української мови та літератури.</span>
                     </div>
                     <div className="social">
                         <img onClick={() => window.open('https://www.facebook.com/profile.php?id=100018870015455')} src={fbIcon} />
